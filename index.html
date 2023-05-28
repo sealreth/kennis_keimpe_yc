@@ -1,0 +1,162 @@
+<!--Kennismakings Opdracht: Keimpe Snip-->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Kennismakings Opdracht</title> <!--gives the tab in the browser a name-->
+	<style>
+		.myDiv {
+			border: 5px outset teal;
+			background-color: lightcyan;
+			text-align: center;
+		}	
+		h1{
+			color:yellow;
+			background-color:blue;
+		}
+		p{
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			background-color: aquamarine;
+			border: 5px solid green;
+		}
+		p1{
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		h2{
+			color: lime;
+			background-color: green;
+			font-style: italic;
+		}
+		h3{
+			color: white;
+			background-color: teal;
+			font-style: italic, bold;
+		}
+		table, th, td {
+			border: 1px solid black;
+			background-color: pink;
+		}
+		th, td {
+			padding: 20px;
+		}
+	</style>
+</head>
+
+<body>
+Hoi <b>Hallo Weereld!</b>
+<a href="https://www.Keimpesnip.nl"> <br><br>This is my website!</a>
+<hr>
+<h1>Dit is een kennismakings opdracht!</h1>
+<hr>
+<h2> Paragraaf 1: Belangerijk bericht</h2>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+	<br> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+	<br> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+	<br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<hr>
+
+<div class="myDiv">
+	<h3>Welcome, Welcome... WELCOME</h3>
+	<p1>I like cake.</p1>
+  </div>
+
+<hr>
+<h4>Table's</h4>
+<table style="min-width:200px">
+  <tr>
+  	<th>Day</th>
+    <th>Hours</th>
+    <th>%</th>
+	<th>Completion</th>
+  </tr>
+  <tr>
+    <td>Mon</td>
+    <td>10</td>
+	<td>10</td>
+	<td>10</td>
+  </tr>
+  <tr>
+    <td>February</td>
+	<td>10</td>
+	<td>10</td>
+    <td>$80</td>
+  </tr>
+</table>
+<hr>
+<table>
+	<caption>Personal Details</caption>
+  <tr>
+    <th>Name:</th>
+    <td>Keimpe Snip</td>
+  </tr>
+  <tr>
+    <th>Email:</th>  
+    <td>pr.ksnip@gmail.com</td>      
+  </tr>  
+  <tr>
+    <th>Phone:</th>
+    <td>+316 174 99 329</td>
+  </tr>
+</table>
+<hr>
+<h4>Lists!</h4>
+<ol type="A">
+	<li>Starfield</li>
+	<li>Star Citizen</li>
+	<li>Star Wars</li>
+</ol>
+<ul>
+	<li>Sci-fi</li>
+	<li>Fantasy</li>
+	<li>Non-fiction</li>
+	<li>Mystery</li>
+</ul>
+
+<hr>
+<h4>Select your favorite ship and give it a name!</h4>
+<form action="ship.html" method="get">
+  	<label for="Ship">Choose your ship from the list:</label>
+  	<select id="Ship" name="ship">
+    	<option value="tiefighter">Tie-Fighter</option>
+    	<option value="xwing">X-Wing</option>
+    	<option value="venator class star-destroyer">Venator Class Star-destroyer</option>
+    	<option value="Millenium falcon">Millenium Falcon</option>
+    	<option value="slave1">Slave-1</option>
+  	</select>
+ 	<label for="Name">Shipname</label> 
+	<input name="name" id="Name">
+  	<input type="submit">
+</form>
+
+<hr>
+<h4>Dangerous button!</h4>
+<button type="button" onclick="alert('Self-destruct sequence initialized!')">DON'T CLICK ME</button>
+
+<hr>
+
+<p1>A drawing I made!</p1><br>
+<img src="LucineAlreAscalonianGuardian.png" alt="Ascolonian Guardian" width="360" height="512.6" style="border:6px solid teal">
+
+<hr>
+
+<form action="Action.txt"></form>
+	<label for="Ships">Choose a vessel:</label>
+	<select id="Ships" name="ships">
+  		<option value="xwing">X-Wing</option>
+  		<option value="tiefighter">Tie-Figher</option>
+  		<option value="millenumfalcon">Millenium Falcon</option>
+ 		<option value="slave1">Slave-1</option>
+	</select>
+	<br><br>
+	<button onclick="alertSelectedShip()">submit</button>
+</form>
+<script>
+	const alertSelectedShip = () => {
+		const select = document.querySelector("#Ships")
+		alert(select.options[select.selectedIndex].text) 
+	}
+</script>
+</body>
+</html>

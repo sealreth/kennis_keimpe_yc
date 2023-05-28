@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selected ship</title>
+</head>
+
+<body>
+    <h1>Your selected ship!</h1>
+    <p id="Ship"></p>
+    <script> //Java script
+        const Ship = document.querySelector("#Ship") //Selecting first element with the ID of Ship. 
+        const params = new URLSearchParams(document.location.search)
+        //console.log(params.get("ship"))
+        const ship = params.get("ship")
+        const name = params.get("name")
+        //alert(shipName)
+        Ship.innerText = ship + " with the name of " + name
+    </script>
+</body>
+</html>
